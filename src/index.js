@@ -8,9 +8,9 @@ const { el: headerEl, setText: setHeaderText } = Header(
   'May the best win!'
 )
 
-const navigation = Navigation(navigate)
+const navigation = Navigation(onNavigate)
 
-function navigate(text) {
+function onNavigate(text) {
   console.log(text)
 }
 
