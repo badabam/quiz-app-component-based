@@ -1,4 +1,5 @@
 import createElement from '../../lib/createElement'
+import Button from '../Button'
 import './CreateForm.css'
 
 export default function CreateForm(onSubmit) {
@@ -13,9 +14,11 @@ export default function CreateForm(onSubmit) {
       Answer:
       <input name="answer" placeholder="It is ...">
     </label>
-    <button>Create Question</button>
   `,
   })
+
+  form.append(Button('Create!'))
+
   form.addEventListener('submit', event => {
     event.preventDefault()
     const { question: questionInput, answer: answerInput } = form.elements
