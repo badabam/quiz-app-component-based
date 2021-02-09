@@ -6,9 +6,9 @@ import createElement from './lib/createElement'
 
 const cards = []
 
-const { el: headerEl } = Header('Quiz App', 'May the best win!')
+const header = Header('Quiz App')
 
-const navigation = Navigation(onNavigate) // dependency injection
+const navigation = Navigation(onNavigate)
 
 const homePage = createElement('main', { className: 'HomePage', hidden: false })
 
@@ -23,7 +23,7 @@ const createPage = createElement(
 const grid = createElement(
   'div',
   { className: 'appGrid' },
-  headerEl,
+  header,
   homePage,
   createPage,
   navigation
@@ -48,10 +48,12 @@ function onNavigate(text) {
   if (text === 'Home') {
     homePage.hidden = false
     createPage.hidden = true
+    header.setText('Homepage')
   }
 
   if (text === 'Create') {
     homePage.hidden = true
     createPage.hidden = false
+    header.setText('Create cards')
   }
 }
