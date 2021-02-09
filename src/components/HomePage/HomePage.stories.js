@@ -5,4 +5,10 @@ export default {
   component: HomePage,
 }
 
-export const base = () => HomePage().el
+export const base = () =>
+  HomePage([
+    {
+      question: 'This could be your question',
+      answer: 'This could be your answer',
+    },
+  ]).el

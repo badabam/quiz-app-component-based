@@ -2,8 +2,10 @@ import createElement from '../../lib/createElement'
 import Card from '../Card'
 import './HomePage.css'
 
-export default function HomePage() {
+export default function HomePage(cards) {
   const el = createElement('main', { className: 'HomePage', hidden: false })
+
+  cards && setCards(cards)
 
   function setCards(cards) {
     const cardElements = cards.map(({ question, answer }) =>

@@ -39,13 +39,13 @@ function onSubmit(question, answer) {
 function onNavigate(text) {
   if (text === 'Home') {
     homePage.show()
-    createPage.hidden = true
+    createPage.hide()
     header.setText('Homepage')
   }
 
   if (text === 'Create') {
     homePage.hide()
-    createPage.hidden = false
+    createPage.show()
     header.setText('Create cards')
   }
 }
