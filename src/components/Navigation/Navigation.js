@@ -14,14 +14,11 @@ const buttonsConfig = [
 ]
 
 export default function Navigation(onNavigate) {
-  // destructuring assignment
   const buttons = buttonsConfig.map(({ svgPath, text }) => {
-    // destructuring assignment of a parameter
     const button = createElement('img', { src: svgPath, alt: text })
     button.addEventListener('click', () => onNavigate(text))
     return button
   })
 
-  const el = createElement('nav', { className: 'Navigation' }, ...buttons) // spread of buttons
-  return el
+  return createElement('nav', { className: 'Navigation' }, ...buttons)
 }
