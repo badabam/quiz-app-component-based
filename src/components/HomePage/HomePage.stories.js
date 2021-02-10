@@ -5,14 +5,15 @@ export default {
   component: HomePage,
 }
 
-export const base = () =>
-  HomePage([
-    {
-      question: 'This could be your question',
-      answer: 'This could be your answer',
-    },
-    {
-      question: 'This could be your question',
-      answer: 'This could be your answer',
-    },
-  ]).el
+const exampleCards = [
+  {
+    question: 'This could be your question',
+    answer: 'This could be your answer',
+  },
+  {
+    question: 'This could be your question',
+    answer: 'This could be your answer',
+  },
+]
+
+export const base = () => HomePage(exampleCards).el

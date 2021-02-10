@@ -3,7 +3,7 @@ import Card from '../Card'
 import './HomePage.css'
 
 export default function HomePage(cards) {
-  const el = createElement('main', { className: 'HomePage', hidden: false })
+  const el = createElement('main', { className: 'HomePage' })
 
   cards && setCards(cards)
 

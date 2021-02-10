@@ -6,4 +6,5 @@ export default {
   component: CreatePage,
 }
 
-export const base = () => CreatePage(action('onSubmit')).el
+const onSubmit = action('onSubmit')
+export const base = () => CreatePage(onSubmit).el

@@ -1,16 +1,19 @@
 import CreatePage from './components/CreatePage'
-import Grid from './components/Grid/Grid'
+import Grid from './components/Grid'
 import Header from './components/Header'
-import HomePage from './components/HomePage/HomePage'
-import Navigation from './components/Navigation/Navigation'
+import HomePage from './components/HomePage'
+import Navigation from './components/Navigation'
 
 export default function App() {
   const cards = []
 
   const header = Header('Quiz App')
+  const homePage = HomePage(cards)
+
+  const createPage = CreatePage(onSubmit)
+  createPage.hide()
+
   const navigation = Navigation(onNavigate)
-  const homePage = HomePage()
-  const createPage = CreatePage(onSubmit, true)
 
   const grid = Grid(header, homePage, createPage, navigation)
   document.body.append(grid)
