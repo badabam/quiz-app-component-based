@@ -1,5 +1,5 @@
 import createElement from '../../lib/createElement'
-import homeSvg from '@fortawesome/fontawesome-free/svgs/solid/home.svg'
+import homeSvg from '@fortawesome/fontawesome-free/svgs/solid/user.svg'
 import bookmarkSvg from '@fortawesome/fontawesome-free/svgs/solid/bookmark.svg'
 import createSvg from '@fortawesome/fontawesome-free/svgs/solid/edit.svg'
 import settingsSvg from '@fortawesome/fontawesome-free/svgs/solid/cog.svg'
